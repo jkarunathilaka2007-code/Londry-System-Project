@@ -1,0 +1,29 @@
+                       FABRICARE SYSTEM SCHEMA PACK
+
+system_admin {id, gmail, password, updated_at}
+
+companies {id, business_name, business_type, reg_number, business_address, business_logo, created_at}
+
+customers {id, company_id, full_name, phone_number, email_address, nic_number, profile_image, password, status, created_at}
+
+employees {id, full_name, nic_number, email, phone, emergency_contact, designation, profile_image, password, added_by, status, created_at}
+
+inventory {id, item_name, current_stock, unit_price, updated_at, low_stock_alert}
+
+inventory_updates {id, item_id, admin_id, order_id, update_type, quantity, created_at}
+
+notifications {id, sender_id, sender_role, receiver_id, receiver_role, message_text, media_url, media_type, is_read, created_at}
+
+orders {id, customer_id, total_price, pickup_required, order_date, created_at}
+
+order_items {id, order_id, service_id, quantity, unit_price, subtotal, item_due_date, status, created_at}
+
+salary_payments {id, employee_id, amount, month_year, paid_at, admin_id}
+
+salary_structures {id, designation, basic_salary, service_commissions, bonus, created_at}
+
+services {id, service_name, service_image, lead_time, price, created_at}
+
+settlements {id, company_id, admin_id, admin_type, total_amount, delivery_fee, items_count, order_items_ids, settled_at}
+
+attendance {id, employee_id, work_date, in_time, out_time, status}
